@@ -8,22 +8,24 @@ public class FileWriter_BufferedWriter {
 
     public static void main(String[] args) {
 
-        // vetor
+        // Vetor com as linhas que serão escritas no arquivo
         String[] lines = new String[] {"Good morning", "Good afternoon", "Good night"};
 
-
+        // Caminho onde o arquivo será salvo
         String path = "c:\\Users\\icaro\\Documents\\out.txt";
 
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))){
-            for (String line : lines){
-                bw.write(line);
-                bw.newLine();
+        // Bloco try-with-resources para garantir que o BufferedWriter será fechado após o uso
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
+            // Itera sobre cada linha do vetor
+            for (String line : lines) {
+                bw.write(line);  // Escreve a linha no arquivo
+                bw.newLine();    // Adiciona uma nova linha após cada linha escrita
             }
         }
-        catch (IOException erro){
-            erro.printStackTrace();
+        // Captura e trata possíveis exceções relacionadas à escrita de arquivos
+        catch (IOException erro) {
+            erro.printStackTrace();  // Imprime o stack trace em caso de erro
         }
-
-
     }
+}
 }

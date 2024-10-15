@@ -5,35 +5,38 @@ import java.util.Scanner;
 
 public class Manipular_Pastas {
     public static void main(String[] args) {
+        // Cria uma instância de Scanner para ler dados de entrada do usuário
+        Scanner scanner = new Scanner(System.in);
 
-        Scanner sc = new Scanner(System.in);
+        // Solicita ao usuário que insira o caminho de uma pasta
+        System.out.println("Digite o caminho de uma pasta: ");
+        String caminho = scanner.nextLine(); // Lê o caminho fornecido pelo usuário
 
-        System.out.println("Digite um caminho para uma pasta: ");
-        String strPath = sc.nextLine();
+        // Cria uma instância da classe File que representa o diretório especificado
+        File pasta = new File(caminho);
 
-        File path = new File(strPath);
-
-        // vetor das pastas
-        File[] folders = path.listFiles(File::isDirectory);
-
+        // Lista os diretórios dentro da pasta especificada e armazena em um array
+        File[] pastas = pasta.listFiles(File::isDirectory);
         System.out.println("Pastas: ");
-
-        // mostrandov as pastas
-        for (File folder : folders) {
-            System.out.println(folder);
+        for (File p : pastas) {
+            System.out.println(p); // Exibe os diretórios encontrados
         }
 
-        File[] files = path.listFiles(File::isFile);
-
+        // Lista os arquivos dentro da pasta especificada e armazena em um array
+        File[] arquivos = pasta.listFiles(File::isFile);
         System.out.println("Arquivos: ");
-
-        for (File file : files) {
-            System.out.println(files);
+        for (File a : arquivos) {
+            System.out.println(a); // Exibe os arquivos encontrados
         }
 
-        Boolean succes = new File(strPath + "\\subPasta").mkdir();
+        // Solicita ao usuário que insira o nome de uma nova pasta a ser criada
+        System.out.println("Digite o nome da nova pasta a ser criada: ");
+        String novaPasta = scanner.nextLine(); // Lê o nome da nova pasta
 
-        System.out.println("Diretorio criado com sucesso: " + succes);
-        sc.close();
+        // Cria uma nova pasta com o nome especificado pelo usuário
+        boolean sucesso = new File(caminho + "\\" + novaPasta).mkdir();
+        System.out.println("Diretório criado com sucesso: " + sucesso); // Exibe se a criação foi bem-sucedida
+
+        scanner.close();
     }
 }
