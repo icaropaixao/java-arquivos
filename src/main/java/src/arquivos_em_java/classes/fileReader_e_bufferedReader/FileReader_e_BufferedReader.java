@@ -1,4 +1,4 @@
-package src.arquivos_em_java.classes;
+package src.arquivos_em_java.classes.fileReader_e_bufferedReader;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
