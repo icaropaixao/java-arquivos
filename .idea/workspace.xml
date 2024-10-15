@@ -38,6 +38,7 @@
   "keyToString": {
     "Application.Exemplo1.executor": "Run",
     "Application.FileWriter_BufferedWriter.executor": "Run",
+    "Application.Infos.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.Manipular_Pastas.executor": "Run",
     "Application.TryWithResources.executor": "Run",
@@ -50,7 +51,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Manipular_Pastas">
+  <component name="RunManager" selected="Application.Infos">
     <configuration name="Exemplo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.arquivos_em_java.Exemplo1" />
       <module name="java_arquivos" />
@@ -77,12 +78,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.Main" />
+    <configuration name="Infos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.arquivos_em_java.classes.informacoes_do_arquivo.Infos" />
       <module name="java_arquivos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.*" />
+          <option name="PATTERN" value="src.arquivos_em_java.classes.informacoes_do_arquivo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Infos" />
         <item itemvalue="Application.Manipular_Pastas" />
         <item itemvalue="Application.FileWriter_BufferedWriter" />
         <item itemvalue="Application.TryWithResources" />
         <item itemvalue="Application.Exemplo1" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
